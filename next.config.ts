@@ -13,10 +13,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Vercel optimizations
-  experimental: {
-    serverComponentsExternalPackages: ['z-ai-web-dev-sdk'],
-  },
 };
 
 export default nextConfig;
