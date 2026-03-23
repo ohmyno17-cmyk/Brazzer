@@ -1,0 +1,132 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/cli/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Browser user profile
+model BrowserProfile {
+  id           String   @id @default(cuid())
+  name         String
+  avatar       String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  settings     BrowserSettings?
+  history      BrowseHistory[]
+  bookmarks    Bookmark[]
+  tabs         BrowserTab[]
+  shortcuts    Shortcut[]
+}
+
+// Browser settings
+model BrowserSettings {
+  id                  String   @id @default(cuid())
+  profileId           String   @unique
+  profile             BrowserProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  
+  // Theme
+  theme               String   @default("dark") // dark, light, system
+  accentColor         String   @default("#10b981") // emerald
+  
+  // Privacy & Security
+  safeBrowsing        Boolean  @default(true)
+  doNotTrack          Boolean  @default(true)
+  blockThirdPartyCookies Boolean @default(true)
+  clearDataOnExit     Boolean  @default(false)
+  
+  // Search
+  defaultSearchEngine String   @default("freedom") // freedom, google, duckduckgo, bing
+  aiSearchEnabled     Boolean  @default(true)
+  voiceSearchEnabled  Boolean  @default(true)
+  
+  // Display
+  fontSize            String   @default("medium") // small, medium, large
+  showImages          Boolean  @default(true)
+  dataSaverMode       Boolean  @default(false)
+  
+  // Language
+  language            String   @default("id")
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// Browse history
+model BrowseHistory {
+  id           String   @id @default(cuid())
+  profileId    String
+  profile      BrowserProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  
+  url          String
+  title        String?
+  favicon      String?
+  visitedAt    DateTime @default(now())
+  
+  @@index([profileId, visitedAt])
+}
+
+// Bookmarks
+model Bookmark {
+  id           String   @id @default(cuid())
+  profileId    String
+  profile      BrowserProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  
+  url          String
+  title        String?
+  favicon      String?
+  folder       String?
+  createdAt    DateTime @default(now())
+  
+  @@index([profileId])
+}
+
+// Browser tabs
+model BrowserTab {
+  id           String   @id @default(cuid())
+  profileId    String
+  profile      BrowserProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  
+  url          String?
+  title        String?
+  favicon      String?
+  isActive     Boolean  @default(false)
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  
+  @@index([profileId])
+}
+
+// Quick shortcuts
+model Shortcut {
+  id           String   @id @default(cuid())
+  profileId    String
+  profile      BrowserProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  
+  name         String
+  url          String
+  icon         String?
+  color        String   @default("#3b82f6")
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  
+  @@index([profileId])
+}
+
+// Trending searches (cached)
+model TrendingSearch {
+  id           String   @id @default(cuid())
+  query        String
+  category     String?  // news, tech, entertainment, sports, etc.
+  region       String   @default("ID")
+  score        Float    @default(0)
+  updatedAt    DateTime @updatedAt
+  
+  @@index([region, score])
+}

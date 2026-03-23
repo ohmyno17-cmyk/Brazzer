@@ -1,0 +1,436 @@
+==========================================
+[2026-03-23 03:42:17] Starting: bun install
+==========================================
+[BUN] Installing dependencies...
+[0.76ms] ".env"
+bun install v1.3.10 (30e609e0)
+
++ @tailwindcss/postcss@4.1.18
++ @types/react@19.2.8
++ @types/react-dom@19.2.3
++ bun-types@1.3.6
++ eslint@9.39.2
++ eslint-config-next@16.1.3
++ tailwindcss@4.1.18
++ tw-animate-css@1.4.0
++ typescript@5.9.3
++ @dnd-kit/core@6.3.1
++ @dnd-kit/sortable@10.0.0
++ @dnd-kit/utilities@3.2.2
++ @hookform/resolvers@5.2.2
++ @mdxeditor/editor@3.52.3
++ @prisma/client@6.19.2
++ @radix-ui/react-accordion@1.2.12
++ @radix-ui/react-alert-dialog@1.1.15
++ @radix-ui/react-aspect-ratio@1.1.8
++ @radix-ui/react-avatar@1.1.11
++ @radix-ui/react-checkbox@1.3.3
++ @radix-ui/react-collapsible@1.1.12
++ @radix-ui/react-context-menu@2.2.16
++ @radix-ui/react-dialog@1.1.15
++ @radix-ui/react-dropdown-menu@2.1.16
++ @radix-ui/react-hover-card@1.1.15
++ @radix-ui/react-label@2.1.8
++ @radix-ui/react-menubar@1.1.16
++ @radix-ui/react-navigation-menu@1.2.14
++ @radix-ui/react-popover@1.1.15
++ @radix-ui/react-progress@1.1.8
++ @radix-ui/react-radio-group@1.3.8
++ @radix-ui/react-scroll-area@1.2.10
++ @radix-ui/react-select@2.2.6
++ @radix-ui/react-separator@1.1.8
++ @radix-ui/react-slider@1.3.6
++ @radix-ui/react-slot@1.2.4
++ @radix-ui/react-switch@1.2.6
++ @radix-ui/react-tabs@1.1.13
++ @radix-ui/react-toast@1.2.15
++ @radix-ui/react-toggle@1.1.10
++ @radix-ui/react-toggle-group@1.1.11
++ @radix-ui/react-tooltip@1.2.8
++ @reactuses/core@6.1.9
++ @tanstack/react-query@5.90.19
++ @tanstack/react-table@8.21.3
++ class-variance-authority@0.7.1
++ clsx@2.1.1
++ cmdk@1.1.1
++ date-fns@4.1.0
++ embla-carousel-react@8.6.0
++ framer-motion@12.26.2
++ input-otp@1.4.2
++ lucide-react@0.525.0
++ next@16.1.3
++ next-auth@4.24.13
++ next-intl@4.7.0
++ next-themes@0.4.6
++ prisma@6.19.2
++ react@19.2.3
++ react-day-picker@9.13.0
++ react-dom@19.2.3
++ react-hook-form@7.71.1
++ react-markdown@10.1.0
++ react-resizable-panels@3.0.6
++ react-syntax-highlighter@15.6.6
++ recharts@2.15.4
++ sharp@0.34.5
++ sonner@2.0.7
++ tailwind-merge@3.4.0
++ tailwindcss-animate@1.0.7
++ uuid@11.1.0
++ vaul@1.1.2
++ z-ai-web-dev-sdk@0.0.17
++ zod@4.3.5
++ zustand@5.0.10
+
+827 packages installed [8.23s]
+==========================================
+[2026-03-23 03:42:25] Completed: bun install
+[LOG] Step: bun install | Duration: 8s
+==========================================
+
+==========================================
+[2026-03-23 03:42:25] Starting: bun run db:push
+==========================================
+[BUN] Setting up database...
+$ prisma db push
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "custom.db" at "file:/home/z/my-project/db/custom.db"
+
+SQLite database custom.db created at file:/home/z/my-project/db/custom.db
+
+🚀  Your database is now in sync with your Prisma schema. Done in 18ms
+
+Running generate... (Use --skip-generate to skip the generators)
+[2K[1A[2K[GRunning generate... - Prisma Client
+[2K[1A[2K[G✔ Generated Prisma Client (v6.19.2) to ./node_modules/@prisma/client in 71ms
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.2 -> 7.5.0                       │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+==========================================
+[2026-03-23 03:42:27] Completed: bun run db:push
+[LOG] Step: bun run db:push | Duration: 2s
+==========================================
+
+==========================================
+[2026-03-23 03:42:27] Starting: Starting Next.js dev server
+==========================================
+[BUN] Starting development server...
+==========================================
+$ next dev -p 3000 2>&1 | tee dev.log
+[2026-03-23 03:42:27] Completed: Starting Next.js dev server
+[LOG] Step: Starting Next.js dev server | Duration: 0s
+==========================================
+
+==========================================
+[2026-03-23 03:42:27] Starting: Waiting for Next.js dev server
+==========================================
+Waiting for Next.js dev server to be ready on localhost:3000...
+Attempt 1/60: Next.js dev server not ready yet, waiting...
+▲ Next.js 16.1.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://21.0.11.233:3000
+- Environments: .env
+
+✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next/dev/types/**/*.ts'
+
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+✓ Ready in 915ms
+Next.js dev server is ready!
+ GET / 200 in 2.7s (compile: 2.6s, render: 168ms)
+==========================================
+[2026-03-23 03:42:31] Completed: Waiting for Next.js dev server
+[LOG] Step: Waiting for Next.js dev server | Duration: 4s
+==========================================
+
+==========================================
+[2026-03-23 03:42:31] Starting: Health check
+==========================================
+[BUN] Performing health check...
+ GET / 200 in 24ms (compile: 2ms, render: 22ms)
+[BUN] Health check passed
+==========================================
+[2026-03-23 03:42:31] Completed: Health check
+[LOG] Step: Health check | Duration: 0s
+==========================================
+
+==========================================
+[2026-03-23 03:42:31] Starting: Starting mini-services
+==========================================
+Found mini-services directory, scanning for sub-services...
+Mini-services startup completed. Started 0 service(s).
+==========================================
+[2026-03-23 03:42:31] Completed: Starting mini-services
+[LOG] Step: Starting mini-services | Duration: 0s
+==========================================
+
+Next.js dev server is running in background (PID: 658).
+Use 'kill 658' to stop it.
+ GET / 200 in 30ms (compile: 3ms, render: 27ms)
+ GET / 200 in 38ms (compile: 4ms, render: 34ms)
+ GET / 200 in 31ms (compile: 2ms, render: 29ms)
+ GET / 200 in 32ms (compile: 2ms, render: 30ms)
+ GET / 200 in 28ms (compile: 1907µs, render: 26ms)
+ GET / 200 in 30ms (compile: 2ms, render: 28ms)
+ GET / 200 in 40ms (compile: 3ms, render: 37ms)
+ GET / 200 in 29ms (compile: 2ms, render: 26ms)
+ GET / 200 in 28ms (compile: 2ms, render: 25ms)
+ GET / 200 in 24ms (compile: 1933µs, render: 22ms)
+ GET / 200 in 24ms (compile: 1843µs, render: 22ms)
+ GET / 200 in 25ms (compile: 1713µs, render: 23ms)
+ GET / 200 in 34ms (compile: 1446µs, render: 33ms)
+ GET / 200 in 23ms (compile: 1559µs, render: 22ms)
+ GET / 200 in 25ms (compile: 1860µs, render: 24ms)
+ GET / 200 in 38ms (compile: 6ms, render: 32ms)
+ GET / 200 in 22ms (compile: 1386µs, render: 20ms)
+ GET / 200 in 24ms (compile: 1420µs, render: 22ms)
+ GET / 200 in 28ms (compile: 1580µs, render: 26ms)
+ GET / 200 in 29ms (compile: 1816µs, render: 28ms)
+ GET / 200 in 19ms (compile: 1755µs, render: 17ms)
+ GET / 200 in 18ms (compile: 1390µs, render: 17ms)
+ GET / 200 in 28ms (compile: 3ms, render: 25ms)
+ GET / 200 in 29ms (compile: 2ms, render: 27ms)
+ GET / 200 in 23ms (compile: 1564µs, render: 22ms)
+ GET / 200 in 36ms (compile: 3ms, render: 33ms)
+ GET / 200 in 27ms (compile: 1816µs, render: 26ms)
+ GET / 200 in 25ms (compile: 3ms, render: 23ms)
+ GET / 200 in 28ms (compile: 1935µs, render: 26ms)
+✓ Compiled in 946ms
+ GET / 200 in 438ms (compile: 263ms, render: 175ms)
+ GET / 200 in 195ms (compile: 52ms, render: 143ms)
+✓ Compiled in 127ms
+✓ Compiled in 188ms
+ GET / 200 in 217ms (compile: 56ms, render: 161ms)
+ GET / 200 in 57ms (compile: 5ms, render: 52ms)
+✓ Compiled in 120ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 96ms (compile: 57ms, render: 39ms)
+ GET / 200 in 132ms (compile: 3ms, render: 129ms)
+ GET / 200 in 61ms (compile: 5ms, render: 56ms)
+ GET / 200 in 50ms (compile: 3ms, render: 47ms)
+ GET / 200 in 59ms (compile: 3ms, render: 56ms)
+ GET / 200 in 43ms (compile: 2ms, render: 41ms)
+ GET / 200 in 49ms (compile: 3ms, render: 46ms)
+✓ Compiled in 102ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 203ms (compile: 50ms, render: 153ms)
+ GET / 200 in 67ms (compile: 3ms, render: 63ms)
+✓ Compiled in 192ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 250ms (compile: 60ms, render: 190ms)
+✓ Compiled in 145ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 88ms (compile: 58ms, render: 30ms)
+ GET / 200 in 166ms (compile: 4ms, render: 162ms)
+ GET / 200 in 60ms (compile: 3ms, render: 57ms)
+ GET /api/search?q=P&num=15 200 in 2.6s (compile: 237ms, render: 2.4s)
+ GET /api/search?q=Porn&num=15 200 in 1121ms (compile: 1760µs, render: 1119ms)
+ GET / 200 in 84ms (compile: 3ms, render: 81ms)
+✓ Compiled in 176ms
+✓ Compiled in 274ms
+✓ Compiled in 137ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 242ms (compile: 57ms, render: 185ms)
+ POST /api/search 200 in 35ms (compile: 30ms, render: 5ms)
+ GET / 200 in 62ms (compile: 5ms, render: 58ms)
+ GET / 200 in 52ms (compile: 3ms, render: 50ms)
+ GET / 200 in 43ms (compile: 2ms, render: 41ms)
+ POST /api/search 200 in 6ms (compile: 1753µs, render: 5ms)
+✓ Compiled in 138ms
+ POST /api/search 200 in 6ms (compile: 1512µs, render: 5ms)
+⚠ Cross origin request detected from preview-chat-2894e344-e99c-485a-8956-1b734a0e1355.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 213ms (compile: 54ms, render: 159ms)
+ POST /api/search 200 in 6ms (compile: 2ms, render: 4ms)
+ GET / 200 in 58ms (compile: 7ms, render: 51ms)
+ POST /api/search 200 in 6ms (compile: 1776µs, render: 4ms)
+ GET / 200 in 62ms (compile: 4ms, render: 58ms)
+ POST /api/search 200 in 6ms (compile: 1991µs, render: 4ms)
+ POST /api/search 500 in 11ms (compile: 5ms, render: 5ms)
+ GET /api/search?q=Porn&page=1&num=12&type=web&recency= 200 in 1084ms (compile: 1652µs, render: 1083ms)
+ GET /api/search?q=Porn&page=1&num=12&type=web&recency= 200 in 8ms (compile: 5ms, render: 4ms)
+ GET /api/search?q=Porn&page=1&num=12&type=news&recency= 200 in 1435ms (compile: 1876µs, render: 1434ms)
+ GET /api/search?q=Porn&page=1&num=12&type=images&recency= 200 in 1135ms (compile: 3ms, render: 1132ms)
+ GET /api/search?q=Porn&page=1&num=12&type=videos&recency= 200 in 1006ms (compile: 2ms, render: 1003ms)
+ POST /api/search 500 in 7ms (compile: 3ms, render: 4ms)
+ GET / 200 in 56ms (compile: 5ms, render: 51ms)
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+ GET / 200 in 51ms (compile: 4ms, render: 47ms)
+ POST /api/search 200 in 6ms (compile: 1814µs, render: 4ms)
+ GET / 200 in 47ms (compile: 7ms, render: 41ms)
+ POST /api/search 200 in 5ms (compile: 1531µs, render: 3ms)
+ GET / 200 in 48ms (compile: 5ms, render: 43ms)
+ POST /api/search 200 in 6ms (compile: 1704µs, render: 4ms)
+ GET / 200 in 48ms (compile: 2ms, render: 46ms)
+ POST /api/search 200 in 5ms (compile: 1735µs, render: 3ms)
+ GET / 200 in 52ms (compile: 6ms, render: 46ms)
+ POST /api/search 200 in 5ms (compile: 1668µs, render: 3ms)
+ GET / 200 in 57ms (compile: 2ms, render: 54ms)
+ POST /api/search 200 in 5ms (compile: 1606µs, render: 3ms)
+ GET / 200 in 48ms (compile: 3ms, render: 45ms)
+ POST /api/search 200 in 5ms (compile: 1685µs, render: 3ms)
+ GET / 200 in 52ms (compile: 3ms, render: 49ms)
+ POST /api/search 200 in 5ms (compile: 1543µs, render: 3ms)
+ GET / 200 in 55ms (compile: 2ms, render: 53ms)
+ POST /api/search 200 in 5ms (compile: 1574µs, render: 4ms)
+ GET / 200 in 48ms (compile: 2ms, render: 46ms)
+ POST /api/search 200 in 5ms (compile: 1517µs, render: 4ms)
+ GET / 200 in 49ms (compile: 2ms, render: 47ms)
+ POST /api/search 200 in 5ms (compile: 1734µs, render: 3ms)
+ GET / 200 in 46ms (compile: 2ms, render: 43ms)
+✓ Compiled in 143ms
+ POST /api/search 200 in 5ms (compile: 1437µs, render: 3ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 225ms (compile: 46ms, render: 179ms)
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+✓ Compiled in 288ms
+⚠ Fast Refresh had to perform a full reload when ./src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 228ms (compile: 58ms, render: 170ms)
+ POST /api/search 200 in 8ms (compile: 3ms, render: 6ms)
+✓ Compiled in 236ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 227ms (compile: 208ms, render: 20ms)
+ GET / 200 in 231ms (compile: 68ms, render: 163ms)
+ POST /api/search 200 in 6ms (compile: 1662µs, render: 4ms)
+ GET / 200 in 61ms (compile: 6ms, render: 55ms)
+ POST /api/search 200 in 6ms (compile: 1722µs, render: 4ms)
+ POST /api/search 500 in 5ms (compile: 1714µs, render: 3ms)
+ GET /api/search?q=Free&page=1&num=12&type=web 200 in 1151ms (compile: 1432µs, render: 1149ms)
+ POST /api/search 500 in 7ms (compile: 2ms, render: 4ms)
+ GET /api/search?q=Free&page=1&num=12&type=web 200 in 7ms (compile: 2ms, render: 4ms)
+ GET /api/search?q=Xnxx&page=1&num=12&type=web 200 in 964ms (compile: 1948µs, render: 962ms)
+ POST /api/search 500 in 5ms (compile: 1596µs, render: 3ms)
+ GET / 200 in 46ms (compile: 4ms, render: 42ms)
+ POST /api/search 200 in 8ms (compile: 1989µs, render: 6ms)
+✓ Compiled in 140ms
+ POST /api/search 200 in 47ms (compile: 39ms, render: 8ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 244ms (compile: 71ms, render: 173ms)
+✓ Compiled in 220ms
+ POST /api/search 200 in 7ms (compile: 1982µs, render: 5ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 228ms (compile: 60ms, render: 168ms)
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+✓ Compiled in 105ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 100ms (compile: 57ms, render: 42ms)
+ GET /api/search?q=Buka+situs&page=1&num=40&type=web 200 in 2.7s (compile: 44ms, render: 2.7s)
+ GET /api/search?q=Buka+situs&page=1&num=40&type=web 200 in 6ms (compile: 3ms, render: 4ms)
+ GET /api/search?q=Buka+situs&page=1&num=40&type=images 200 in 1269ms (compile: 2ms, render: 1267ms)
+ GET /api/search?q=Buka+situs&page=1&num=40&type=news 200 in 2.9s (compile: 3ms, render: 2.9s)
+ GET / 200 in 156ms (compile: 3ms, render: 154ms)
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+ GET / 200 in 55ms (compile: 7ms, render: 48ms)
+ POST /api/search 200 in 6ms (compile: 1858µs, render: 4ms)
+ GET / 200 in 51ms (compile: 5ms, render: 46ms)
+ POST /api/search 200 in 7ms (compile: 3ms, render: 4ms)
+ GET / 200 in 39ms (compile: 6ms, render: 34ms)
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+ POST /api/search 200 in 6ms (compile: 1960µs, render: 4ms)
+ GET /api/search?q=Porn&page=1&num=40&type=web 200 in 2.8s (compile: 1843µs, render: 2.8s)
+ GET / 200 in 51ms (compile: 3ms, render: 47ms)
+ GET / 200 in 47ms (compile: 5ms, render: 42ms)
+ POST /api/search 200 in 6ms (compile: 2ms, render: 4ms)
+ GET / 200 in 58ms (compile: 6ms, render: 52ms)
+ POST /api/search 200 in 4ms (compile: 1559µs, render: 3ms)
+✓ Compiled in 298ms
+✓ Compiled in 128ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 191ms (compile: 51ms, render: 140ms)
+ POST /api/search 200 in 39ms (compile: 32ms, render: 6ms)
+ GET / 200 in 66ms (compile: 4ms, render: 62ms)
+ POST /api/search 200 in 10ms (compile: 2ms, render: 8ms)
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+ POST /api/search 200 in 6ms (compile: 1794µs, render: 4ms)
+ POST /api/search 200 in 6ms (compile: 1838µs, render: 4ms)
+ POST /api/search 200 in 4ms (compile: 1215µs, render: 3ms)
+ GET /api/search?q=Porn&page=1&num=40&type=web 200 in 1066ms (compile: 1344µs, render: 1065ms)
+ GET /api/search?q=Porn&page=1&num=40&type=web 200 in 4ms (compile: 1733µs, render: 3ms)
+ GET / 200 in 55ms (compile: 2ms, render: 53ms)
+ POST /api/search 200 in 6ms (compile: 1512µs, render: 4ms)
+ GET / 200 in 48ms (compile: 3ms, render: 44ms)
+ POST /api/search 200 in 5ms (compile: 1533µs, render: 4ms)
+✓ Compiled in 201ms
+ POST /api/search 200 in 5ms (compile: 1849µs, render: 3ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 218ms (compile: 49ms, render: 170ms)
+ POST /api/search 200 in 5ms (compile: 1819µs, render: 3ms)
+ GET / 200 in 66ms (compile: 5ms, render: 61ms)
+ POST /api/search 200 in 6ms (compile: 1906µs, render: 4ms)
+ GET / 200 in 47ms (compile: 4ms, render: 44ms)
+ GET / 200 in 41ms (compile: 2ms, render: 39ms)
+ POST /api/search 200 in 7ms (compile: 3ms, render: 4ms)
+ POST /api/search 200 in 5ms (compile: 1926µs, render: 3ms)
+ POST /api/search 200 in 5ms (compile: 1532µs, render: 3ms)
+ POST /api/search 200 in 4ms (compile: 1213µs, render: 3ms)
+ GET /api/search?q=Porn&page=1&num=40&type=web 200 in 968ms (compile: 1387µs, render: 966ms)
+ GET / 200 in 41ms (compile: 2ms, render: 39ms)
+ POST /api/search 200 in 5ms (compile: 1523µs, render: 3ms)
+ GET / 200 in 44ms (compile: 2ms, render: 42ms)
+ GET / 200 in 42ms (compile: 2ms, render: 40ms)
+ POST /api/search 200 in 6ms (compile: 1465µs, render: 4ms)
+✓ Compiled in 154ms
+ POST /api/search 200 in 7ms (compile: 2ms, render: 5ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 258ms (compile: 61ms, render: 197ms)
+ POST /api/search 200 in 9ms (compile: 3ms, render: 5ms)
+✓ Compiled in 142ms
+ POST /api/search 200 in 5ms (compile: 1683µs, render: 3ms)
+✓ Compiled in 126ms
+ POST /api/search 200 in 7ms (compile: 2ms, render: 4ms)
+✓ Compiled in 140ms
+ POST /api/search 200 in 6ms (compile: 1934µs, render: 4ms)
+✓ Compiled in 124ms
+ POST /api/search 200 in 7ms (compile: 2ms, render: 4ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 205ms (compile: 56ms, render: 150ms)
+ POST /api/search 200 in 8ms (compile: 3ms, render: 5ms)
+ GET / 200 in 66ms (compile: 4ms, render: 61ms)
+ POST /api/search 200 in 5ms (compile: 1690µs, render: 4ms)
+ GET / 200 in 61ms (compile: 3ms, render: 58ms)
+ POST /api/search 200 in 5ms (compile: 1626µs, render: 3ms)
+✓ Compiled in 151ms
+ POST /api/search 200 in 8ms (compile: 3ms, render: 4ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 231ms (compile: 53ms, render: 178ms)
+ POST /api/search 200 in 6ms (compile: 1554µs, render: 5ms)
+ POST /api/search 200 in 7ms (compile: 1721µs, render: 5ms)
+ GET /api/search?q=Bokep&page=1&num=40&type=web 200 in 1129ms (compile: 1578µs, render: 1127ms)
+ GET / 200 in 63ms (compile: 4ms, render: 59ms)
+ POST /api/search 200 in 5ms (compile: 1727µs, render: 3ms)
+ POST /api/search 200 in 5ms (compile: 1536µs, render: 3ms)
+ POST /api/search 200 in 5ms (compile: 1572µs, render: 3ms)
+ GET /api/search?q=Cara+masak&page=1&num=40&type=web 200 in 3.0s (compile: 1783µs, render: 3.0s)
+ GET /api/search?q=Cara+masak&page=1&num=40&type=web 200 in 4ms (compile: 1667µs, render: 3ms)
+ GET / 200 in 48ms (compile: 2ms, render: 46ms)
+ POST /api/search 200 in 5ms (compile: 1529µs, render: 4ms)
+✓ Compiled in 222ms
+ POST /api/search 200 in 5ms (compile: 1695µs, render: 3ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 234ms (compile: 51ms, render: 183ms)
+ POST /api/search 200 in 8ms (compile: 2ms, render: 6ms)
+ GET / 200 in 67ms (compile: 4ms, render: 63ms)
+ POST /api/search 200 in 6ms (compile: 1795µs, render: 4ms)
