@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Vercel handles this automatically
   reactStrictMode: false,
   typescript: {
     ignoreBuildErrors: true,
@@ -13,6 +12,10 @@ const nextConfig: NextConfig = {
         hostname: '**',
       },
     ],
+  },
+  // Vercel optimizations
+  experimental: {
+    serverComponentsExternalPackages: ['z-ai-web-dev-sdk'],
   },
 };
 
